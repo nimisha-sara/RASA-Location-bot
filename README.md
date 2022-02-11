@@ -10,16 +10,17 @@ Python Version    :         3.8.0
 
 ### Installing
 
-Install Virtualenv
+Activate virtualenv in project directory
 
 ```
-python -m pip install virtualenv
+virtualenv venv
 source venv/Scripts/activate
 ```
-Activate it in project directory
+
+Install Libraries
 
 ```
-source venv/Scripts/activate
+python -m pip install -r requirements.txt
 ```
 
 Run actions server
