@@ -1,0 +1,85 @@
+version: "3.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - start
+  - deny
+  - how_are_you
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - location
+  - inform-pin
+  - inform-type
+  - thanking
+  - inform
+
+entities:
+  - inform_pin
+  - inform_type
+
+slots:
+  locationType:
+      type: categorical
+      values:
+        - state
+        - city
+        - district
+
+      influence_conversation: true
+      mappings:
+      - type: from_entity
+        entity: inform_type
+
+  pincode:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: inform_pin
+
+actions:
+  - action_get_location
+
+responses:
+  utter_greet:
+  - text: "Hey there!"
+
+  utter_im_good:
+  - text: "I'm doing great today! What about you ?"
+  - text: "I'm great! What about you ?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_iamabot:
+  - text: "I am locy the location bot."
+
+  utter_start:
+  - text: "What do you want to know ? \n- State\n- District\n- City"
+
+  utter_pin:
+  - text: "Please share the PINCODE"
+
+  utter_again:
+  - text: "Do you want to check for another area ?"
+
+  utter_did_that_help:
+  - text: "Hope that helped!"
+
+  utter_welcome:
+  - text: "Welcome!"
+  - text: "Happy to help!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

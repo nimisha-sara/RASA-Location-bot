@@ -1,0 +1,28 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-inform_pin",
+      "2": "I-inform_pin",
+      "3": "L-inform_pin",
+      "4": "U-inform_pin",
+      "5": "B-inform_type",
+      "6": "I-inform_type",
+      "7": "L-inform_type",
+      "8": "U-inform_type",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-inform_pin": 1,
+      "I-inform_pin": 2,
+      "L-inform_pin": 3,
+      "U-inform_pin": 4,
+      "B-inform_type": 5,
+      "I-inform_type": 6,
+      "L-inform_type": 7,
+      "U-inform_type": 8,
+      "O": 0
+    },
+    "num_tags": 9
+  }
+]
